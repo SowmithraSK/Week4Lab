@@ -53,8 +53,8 @@ public class NoteServlet extends HttpServlet {
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false))); 
         
         try{
-            pw.write(title);
-            pw.write(contents);
+            pw.println(title);
+            pw.println(contents);
             pw.close();
         }catch(Exception e){
             getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp")
