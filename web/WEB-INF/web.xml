@@ -4,6 +4,7 @@
         <servlet-name>NoteServlet</servlet-name>
         <servlet-class>servlets.NoteServlet</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>NoteServlet</servlet-name>
         <url-pattern>/note</url-pattern>

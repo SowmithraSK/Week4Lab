@@ -9,9 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit Note</title>
+        <title>Simple Note Keeper</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Simple Note Keeper</h1>
+        <h2>Edit Note</h2>
+        <form method="post" action="editnote">
+            Title: <input type="text" name="title" value="${title}"><br>
+            <label for="contents">Contents:</label>
+            <textarea name="contents" rows="5" cols="33" value="${contents}">
+                
+            </textarea>
+        </form>
+        <button type="submit" name="savenote" onclick="">Save</button>
     </body>
 </html>
