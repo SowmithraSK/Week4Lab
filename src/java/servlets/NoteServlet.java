@@ -52,10 +52,16 @@ public class NoteServlet extends HttpServlet {
         // to write to a file
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false))); 
         
-        pw.write(title);
-        pw.write(contents);
+        try{
+            pw.write(title);
+            pw.write(contents);
+            pw.close();
+        }catch(Exception e){
+            getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp")
+            .forward(request, response);
+            return;
+        }
         
-
         String newT = br.readLine();
         String newC = br.readLine();
         
