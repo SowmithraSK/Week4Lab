@@ -20,7 +20,8 @@
             <textarea name="contents" rows="5" cols="33" value="${contents}">
                 
             </textarea>
+            <button type="submit" name="savenote" onclick="">Save</button>
         </form>
-        <button type="submit" name="savenote" onclick="">Save</button>
+        
     </body>
 </html>
